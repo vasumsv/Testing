@@ -1,0 +1,1 @@
+const t={trial:10,starter:30,growth:100,pro:null,business:null},e={trial:"Free",starter:"Starter",growth:"Growth",pro:"Pro",business:"SnapQuote Business"},s=["starter","growth","pro"];function n(r){return r?r==="business"?!0:s.includes(r):!1}function i(r){return r==="trial"||r==="free"}export{e as P,i as a,t as b,n as i};

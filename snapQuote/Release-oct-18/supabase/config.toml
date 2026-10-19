@@ -1,0 +1,59 @@
+[functions.razorpay-create-order]
+verify_jwt = false
+
+[functions.razorpay-verify-payment]
+verify_jwt = false
+
+[functions.admin-login]
+verify_jwt = false
+
+[functions.admin-verify-session]
+verify_jwt = false
+
+[functions.admin-set-password]
+verify_jwt = false
+
+[functions.admin-reset-studio-password]
+verify_jwt = false
+
+[functions.admin-get-studios]
+verify_jwt = false
+
+[functions.admin-update-studio]
+verify_jwt = false
+
+[functions.admin-manage-subscription]
+verify_jwt = false
+
+[functions.admin-get-stats]
+verify_jwt = false
+
+[functions.admin-save-settings]
+verify_jwt = false
+
+[functions.admin-hash-password]
+verify_jwt = false
+
+[functions.interakt-send]
+verify_jwt = false
+
+[functions.interakt-webhook]
+verify_jwt = false
+
+[functions.pdf-cleanup]
+verify_jwt = false
+
+[functions.client-payment-login]
+verify_jwt = false
+
+[functions.client-payment-data]
+verify_jwt = false
+
+[functions.section-login]
+verify_jwt = false
+
+[functions.section-verify-session]
+verify_jwt = false
+
+[functions.admin-get-whatsapp-settings]
+verify_jwt = false

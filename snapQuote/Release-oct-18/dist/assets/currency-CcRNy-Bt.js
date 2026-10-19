@@ -1,0 +1,1 @@
+const t="en-IN";function n(i){const r=typeof i=="string"?parseFloat(i):i;return isNaN(r)?"₹0":"₹"+r.toLocaleString(t,{maximumFractionDigits:0})}function a(i){const r=typeof i=="string"?parseFloat(i):i;return isNaN(r)?"₹0.00":"₹"+r.toLocaleString(t,{minimumFractionDigits:2,maximumFractionDigits:2})}export{a,n as f};

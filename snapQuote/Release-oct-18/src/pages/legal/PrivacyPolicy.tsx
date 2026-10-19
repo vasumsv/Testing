@@ -1,0 +1,98 @@
+import { useNavigate } from 'react-router-dom';
+import { LegalLayout } from './LegalLayout';
+
+const SECTIONS = [
+  {
+    title: 'Introduction',
+    content: [
+      'SnapQuote ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your personal information when you use our Service.',
+      'By accessing SnapQuote, you consent to the data practices described in this policy. If you do not agree, please discontinue use of the Service.',
+    ],
+  },
+  {
+    title: 'Information We Collect',
+    content: [
+      'Account Information: When you sign up, we collect your full name, email address, and a securely hashed password.',
+      'Studio Profile: To set up your studio, we may collect your studio name, phone number, business email, logo, and optionally your GST number and website.',
+      'Client & Lead Data: Any information you enter about your clients — including names, phone numbers, email addresses, event details, and notes — is stored to power the CRM and quote-building features.',
+      'Usage Data: We collect anonymised data about how you interact with the Service, including pages visited, features used, session duration, and device/browser information. This data does not identify you personally.',
+      'Payment Information: We do not store full payment details. Payment transactions are handled by Razorpay, our third-party payment processor. We receive only a confirmation of payment and associated metadata.',
+    ],
+  },
+  {
+    title: 'How We Use Your Data',
+    content: [
+      'To provide and maintain the Service — including generating quotes, managing leads, and displaying your studio profile.',
+      'To authenticate your account and protect against unauthorised access.',
+      'To process payments and manage your subscription plan.',
+      'To communicate service updates, security alerts, and support responses.',
+      'To analyse aggregate usage patterns and improve the platform. We do not sell your personal data to third parties.',
+      'To comply with applicable legal obligations.',
+    ],
+  },
+  {
+    title: 'Data Protection',
+    content: [
+      'All data is encrypted in transit using TLS (HTTPS). Data at rest is encrypted using industry-standard encryption protocols managed by our cloud infrastructure provider.',
+      'Access to production data is strictly limited to authorised personnel. We apply the principle of least privilege across all internal systems.',
+      'We maintain regular backups and disaster recovery procedures to prevent data loss.',
+      'You are responsible for maintaining the security of your account credentials. We recommend using a strong, unique password and enabling two-factor authentication where available.',
+    ],
+  },
+  {
+    title: 'Third-Party Services',
+    content: [
+      'Supabase: We use Supabase as our backend infrastructure for database storage and authentication. Supabase processes data on our behalf under a Data Processing Agreement and adheres to enterprise-grade security standards.',
+      'Razorpay: Payment processing is handled by Razorpay, which is compliant with PCI DSS. Razorpay\'s privacy policy governs how they handle your payment information.',
+      'Google Fonts: We load fonts from Google Fonts to render our interface. Google may collect limited usage data in connection with font delivery.',
+      'We do not share your personal information with any third party for marketing or advertising purposes.',
+    ],
+  },
+  {
+    title: 'Data Retention',
+    content: [
+      'We retain your account data for as long as your account remains active. If you delete your account, your personal data will be removed within 30 days, subject to any legal retention obligations.',
+      'Certain anonymised usage data and transaction records may be retained for a longer period for legal, audit, or analytical purposes.',
+    ],
+  },
+  {
+    title: 'Your Rights',
+    content: [
+      'Access: You may request a copy of the personal data we hold about you.',
+      'Correction: You may update or correct inaccurate information from your account settings or by contacting us.',
+      'Deletion: You may request deletion of your account and associated personal data. Note that some information may be retained for legal or contractual reasons.',
+      'Portability: You may request an export of your data in a structured, machine-readable format.',
+      'Opt-out: You may opt out of non-essential communications by updating your notification preferences or contacting support.',
+      'To exercise any of these rights, contact us at contact@snapquote.in.',
+    ],
+  },
+  {
+    title: 'Contact Information',
+    content: [
+      'If you have questions about this Privacy Policy or how we handle your data, please reach out:',
+      'Email: contact@snapquote.in',
+    ],
+  },
+];
+
+export function PrivacyPolicy() {
+  const navigate = useNavigate();
+  return (
+    <LegalLayout
+      title="Privacy Policy"
+      lastUpdated="April 1, 2026"
+      onBack={() => navigate(-1)}
+    >
+      {SECTIONS.map((section) => (
+        <section key={section.title} className="mb-10">
+          <h2 className="text-base font-semibold text-slate-900 mb-3">{section.title}</h2>
+          <div className="space-y-3">
+            {section.content.map((para, i) => (
+              <p key={i} className="text-sm text-slate-600 leading-relaxed">{para}</p>
+            ))}
+          </div>
+        </section>
+      ))}
+    </LegalLayout>
+  );
+}
